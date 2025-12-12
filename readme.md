@@ -28,7 +28,7 @@ Build - Maven
 
 1️⃣ Clone the Repository
 
-git clone <your-github-repo-url>
+git clone https://github.com/<your-username>/<repo-name>.git
 cd blog-api
 
 2️⃣ Database Setup
@@ -41,9 +41,14 @@ Or import SQL from:
 
 📁 docs/schema.sql
 
-3️⃣ Configure Database
+3️⃣ Configure application properties
 
 Edit application.properties:
+
+cp src/main/resources/application.example.properties \
+   src/main/resources/application.properties
+   
+Fill in:
 
 spring.datasource.url=jdbc:mysql://localhost:3306/blogdb
 spring.datasource.username=root
@@ -196,6 +201,8 @@ Contains tables:
 Users
 
 Posts
+
+Likes
 
 Comments
 
