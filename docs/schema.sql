@@ -33,6 +33,8 @@ CREATE TABLE posts (
         REFERENCES users(id)
         ON DELETE SET NULL
 );
+ALTER TABLE posts ADD COLUMN image_url VARCHAR(500);
+
 
 ------------------------------------------------------
 -- POST COMMENTS TABLE (corresponds to PostComment entity)
